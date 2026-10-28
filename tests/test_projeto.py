@@ -5,6 +5,7 @@ Também são compatíveis com pytest, instalado opcionalmente.
 """
 
 import csv
+import os
 from pathlib import Path
 import sqlite3
 import subprocess
@@ -254,6 +255,7 @@ class TestTerminal(unittest.TestCase):
         return subprocess.run(
             [sys.executable, "-m", "src.main", "--banco", str(self.banco), *argumentos],
             input=entrada, capture_output=True, text=True, encoding="utf-8",
+            env={**os.environ, "PYTHONUTF8": "1", "PYTHONIOENCODING": "utf-8"},
             cwd=RAIZ, timeout=15,
         )
 
