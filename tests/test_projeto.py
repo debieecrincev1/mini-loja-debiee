@@ -5,6 +5,8 @@ Também são compatíveis com pytest, instalado opcionalmente.
 """
 
 import csv
+import os
+from contextlib import closing
 from pathlib import Path
 import sqlite3
 import subprocess
@@ -77,12 +79,13 @@ class TestBanco(CasoComBanco):
 
     def test_nao_altera_outro_banco_existente(self):
         outro = Path(self.pasta.name) / "outro.db"
-        with sqlite3.connect(outro) as conexao:
-            conexao.execute("CREATE TABLE importante (valor TEXT)")
-            conexao.execute("INSERT INTO importante VALUES ('preservar')")
+        with closing(sqlite3.connect(outro)) as conexao:
+            with conexao:
+                conexao.execute("CREATE TABLE importante (valor TEXT)")
+                conexao.execute("INSERT INTO importante VALUES ('preservar')")
         with self.assertRaisesRegex(ValueError, "outro banco"):
             inicializar_banco(outro)
-        with sqlite3.connect(outro) as conexao:
+        with closing(sqlite3.connect(outro)) as conexao:
             self.assertEqual(conexao.execute("SELECT valor FROM importante").fetchone()[0], "preservar")
 
 
@@ -254,6 +257,7 @@ class TestTerminal(unittest.TestCase):
         return subprocess.run(
             [sys.executable, "-m", "src.main", "--banco", str(self.banco), *argumentos],
             input=entrada, capture_output=True, text=True, encoding="utf-8",
+            env={**os.environ, "PYTHONUTF8": "1", "PYTHONIOENCODING": "utf-8"},
             cwd=RAIZ, timeout=15,
         )
 
@@ -277,7 +281,7 @@ class TestTerminal(unittest.TestCase):
         self.assertIn("Produto 9 cadastrado", processo.stdout)
         self.assertIn("Pedido 13 concluído", processo.stdout)
         self.assertIn("450,60", processo.stdout)
-        with sqlite3.connect(self.banco) as conexao:
+        with closing(sqlite3.connect(self.banco)) as conexao:
             self.assertEqual(conexao.execute("SELECT estoque FROM produtos WHERE id = 9").fetchone()[0], 8)
 
     def test_exportacao_exige_relatorio_e_nao_cria_banco(self):
