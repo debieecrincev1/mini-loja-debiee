@@ -1,0 +1,2 @@
+# Opcional: os mesmos testes também funcionam com python -m unittest.
+pytest

@@ -1,0 +1,2 @@
+# A aplicação usa apenas a biblioteca padrão do Python 3.10 ou superior.
+# Não há pacotes externos obrigatórios.
