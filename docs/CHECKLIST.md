@@ -3,7 +3,7 @@
 Fonte: repositório indicado na aula Desafio Engenheiro de Dados Jr:
 https://github.com/ckoliveiraa/Desafio-Final-Trilha-Engenharia-Dados-JR
 
-Este checklist separa o que está implementado do que depende da conta GitHub.
+Este checklist relaciona os requisitos aos arquivos e à publicação no GitHub.
 
 | Requisito obrigatório | Evidência | Situação |
 | --- | --- | --- |
@@ -18,10 +18,10 @@ Este checklist separa o que está implementado do que depende da conta GitHub.
 | README com execução | `README.md` | Concluído |
 | requirements.txt e .gitignore | Raiz do projeto | Concluído |
 | Pastas organizadas | `src/`, `sql/`, `data/`, `tests/`, `docs/`, `saidas/` | Concluído |
-| Pelo menos 3 commits claros | Histórico Git local incluído | Concluído localmente |
-| Desenvolvimento em branch de trabalho | `feature/mini-loja` | Concluído localmente |
-| Pull Request para main | Precisa existir no GitHub | Pendente de publicação |
-| Repositório público e link na plataforma | Precisa da conta GitHub | Pendente de publicação/entrega |
+| Pelo menos 3 commits claros | Histórico disponível no GitHub | Publicado |
+| Desenvolvimento em branch de trabalho | `feature/mini-loja` | Publicado |
+| Pull Request para main | [PR de implementação](https://github.com/debieecrincev1/mini-loja-debiee/pull/1) | Criado no GitHub |
+| Repositório público e link na plataforma | [Repositório público](https://github.com/debieecrincev1/mini-loja-debiee) | Publicado; envio do link é a etapa final |
 
 ## Bônus opcionais
 
@@ -39,8 +39,9 @@ Esses requisitos de participação não são verificados pelo programa.
 
 - [ ] Executar o programa no computador que será utilizado.
 - [ ] Ler o guia de estudo e conseguir explicar banco, relatórios e transação.
-- [ ] Publicar o repositório no GitHub como público.
-- [ ] Abrir o Pull Request de `feature/mini-loja` para `main` e integrá-lo.
+- [x] Publicar o repositório no GitHub como público.
+- [x] Abrir o Pull Request de `feature/mini-loja` para `main`.
+- [ ] Conferir a integração do Pull Request.
 - [ ] Confirmar que README e arquivos aparecem na branch `main`.
 - [ ] Abrir o link sem estar conectado e conferir o acesso público.
 - [ ] Colar o link do seu repositório na atividade de entrega e verificar o recibo.

@@ -43,6 +43,11 @@ O iniciador Windows `iniciar.bat` foi preparado para Python 3.10 ou superior,
 mas não foi executado em Windows neste ambiente. Os testes de integração
 executaram os mesmos módulos Python em Linux, inclusive em caminhos com espaços.
 
-O código, os testes e o histórico Git local foram verificados. A publicação
-em repositório público, o Pull Request e o recebimento do link pela plataforma
-dependem de acesso à conta e não foram realizados nesta versão do pacote.
+O código, os testes e o histórico Git foram verificados. A publicação está em
+https://github.com/debieecrincev1/mini-loja-debiee e o Pull Request de implementação
+está em https://github.com/debieecrincev1/mini-loja-debiee/pull/1 .
+
+Os arquivos enviados inicialmente ao GitHub tiveram seus objetos Git
+conferidos contra a versão local testada, incluindo o PDF. Esta atualização
+modifica somente a documentação para registrar a publicação. O recebimento
+do link pela plataforma do curso depende da etapa final de envio.

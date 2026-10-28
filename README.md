@@ -208,13 +208,17 @@ Resultado da validação: **31 testes passaram**. Veja [docs/VALIDACAO.md](docs/
 
 ## GitHub e entrega
 
-O pacote contém um repositório Git local com commits reais e a branch
-`feature/mini-loja`. A branch `main` contém a base inicial para permitir um
-Pull Request com as alterações do projeto.
+Repositório público: https://github.com/debieecrincev1/mini-loja-debiee
 
-Ainda é necessário publicar em uma conta GitHub, abrir e integrar o Pull Request
-e enviar o link público na plataforma. Siga [docs/GITHUB_E_ENTREGA.md](docs/GITHUB_E_ENTREGA.md).
-Confira os requisitos em [docs/CHECKLIST.md](docs/CHECKLIST.md).
+O desenvolvimento foi organizado em etapas na branch `feature/mini-loja`,
+com commits de banco, aplicação, testes e documentação. O
+[Pull Request de implementação](https://github.com/debieecrincev1/mini-loja-debiee/pull/1)
+registra a revisão e a integração para `main`.
+
+Para entregar, use o link público deste repositório no campo da atividade.
+Confira os requisitos em [docs/CHECKLIST.md](docs/CHECKLIST.md). O guia
+[docs/GITHUB_E_ENTREGA.md](docs/GITHUB_E_ENTREGA.md) também explica o fluxo Git
+e a etapa de envio na plataforma. O PDF acompanha esse passo a passo de execução.
 
 ## Apoio e aprendizado
 
