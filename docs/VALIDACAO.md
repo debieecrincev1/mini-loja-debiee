@@ -28,6 +28,11 @@ enquanto o teste esperava UTF-8. A configuração dos processos de teste foi
 ajustada para usar UTF-8 explicitamente. O iniciador Windows também
 define essa codificação e mantém o código de saída da aplicação.
 
+A execução no Windows identificou também conexões que permaneciam abertas
+em duas conferências da suíte. O uso de `closing` nesses testes garante
+que os arquivos do banco sejam liberados antes da remoção da pasta
+temporária. As conexões da aplicação já eram fechadas dessa forma.
+
 ## Conferência dos valores
 
 Oito pedidos concluídos somam R$ 445,60. O ticket médio é R$ 55,70. Os
